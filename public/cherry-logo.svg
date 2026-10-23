@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Shadows -->
+  <ellipse cx="36" cy="88" rx="22" ry="6" fill="#14163A" opacity="0.2"/>
+  <ellipse cx="68" cy="88" rx="20" ry="5" fill="#14163A" opacity="0.2"/>
+  
+  <!-- Stems -->
+  <path d="M35 52 C35 25, 45 14, 52 10" stroke="#14163A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M65 54 C65 30, 58 16, 52 10" stroke="#14163A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M35 52 C35 25, 45 14, 52 10" stroke="#3DDBA6" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M65 54 C65 30, 58 16, 52 10" stroke="#3DDBA6" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Leaf -->
+  <path d="M52 10 Q70 6 78 18 Q62 26 52 10 Z" fill="#3DDBA6" stroke="#14163A" stroke-width="3"/>
+
+  <!-- Left Cherry -->
+  <circle cx="35" cy="62" r="24" fill="#FF453A" stroke="#14163A" stroke-width="4.5"/>
+  <ellipse cx="26" cy="52" rx="6" ry="3.5" transform="rotate(-30 26 52)" fill="#FFFFFF" opacity="0.75"/>
+  <!-- Left face -->
+  <circle cx="28" cy="60" r="2.5" fill="#14163A"/>
+  <circle cx="42" cy="60" r="2.5" fill="#14163A"/>
+  <path d="M32 66 Q35 70 38 66" stroke="#14163A" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Right Cherry -->
+  <circle cx="68" cy="65" r="22" fill="#FF6B4A" stroke="#14163A" stroke-width="4.5"/>
+  <ellipse cx="60" cy="56" rx="5" ry="3" transform="rotate(-30 60 56)" fill="#FFFFFF" opacity="0.75"/>
+  <!-- Right face -->
+  <circle cx="62" cy="64" r="2.5" fill="#14163A"/>
+  <circle cx="74" cy="64" r="2.5" fill="#14163A"/>
+  <path d="M65 70 Q68 73 71 70" stroke="#14163A" stroke-width="2" stroke-linecap="round"/>
+</svg>

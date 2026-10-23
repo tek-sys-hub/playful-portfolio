@@ -31,6 +31,19 @@ header .wrap {
   display: block;
 }
 
+.logo-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  vertical-align: middle;
+  display: block;
+  transition: transform 0.2s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+
+.logo:hover .logo-img {
+  transform: rotate(-10deg) scale(1.15);
+}
+
 .head-actions {
   display: flex;
   align-items: center;
@@ -112,6 +125,54 @@ h1 .hl {
   font-size: clamp(1.05rem, 2.2vw, 1.3rem);
   max-width: 65ch;
   margin-block: 28px;
+}
+
+.title-cherry-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.08em;
+}
+
+.title-cherry-img {
+  width: 0.88em;
+  height: 0.88em;
+  display: inline-block;
+  vertical-align: -0.06em;
+  animation: floatCherry 3.6s ease-in-out infinite;
+}
+
+@keyframes floatCherry {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(4deg);
+  }
+}
+
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.hero-pill {
+  font: 700 0.82rem/1 var(--body);
+  padding: 0.55em 0.95em;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  transition: transform 0.12s, box-shadow 0.12s, background-color 0.2s;
+  cursor: default;
+}
+
+.hero-pill:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--ground);
 }
 
 .cta {
@@ -299,6 +360,7 @@ h2 {
 /* Projects */
 .work {
   overflow-x: clip;
+  cursor: pointer;
 }
 
 .filters {
@@ -324,6 +386,7 @@ h2 {
 .card {
   background: var(--card);
   color: var(--ink);
+  cursor: pointer;
   border: 2.5px solid var(--ink);
   border-radius: 22px;
   overflow: hidden;

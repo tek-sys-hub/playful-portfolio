@@ -9,14 +9,27 @@ export const Hero: React.FC = () => {
           <div className="hero-left">
             <div className="status mono">
               <b />
-              Independent Developer · Systems · Creative Code
+              🇳🇵 Based in Nepal · BSc. CSIT · Systems &amp; Code
             </div>
             <h1 id="headline">
-              Hi, I'm Cherry. I build <em className="hl">from the ground up</em>.
+              Hi, I'm{' '}
+              <span className="title-cherry-wrap">
+                <img src="/cherry-logo.svg" alt="Cherry" className="title-cherry-img" />
+                Cherry
+              </span>
+              . I build <em className="hl">from the ground up</em>.
             </h1>
             <p className="lede">
-              Tek Raj Awasthi (aka Cherry). Developing systems programming languages, low-level computing, and creative interactive experiences. <strong>Less hype. More building.</strong>
+              Tek Raj Awasthi (aka Cherry). BSc. CSIT student and independent developer from Nepal 🇳🇵. Creator of <strong>Rubix</strong>, a systems programming language built from scratch in x86-64 assembly. Focused on low-level computing, compiler design, and creative code. <strong>Less hype. More building.</strong>
             </p>
+
+            <div className="hero-pills">
+              <span className="hero-pill">📍 Nepal</span>
+              <span className="hero-pill">🎓 BSc. CSIT</span>
+              <span className="hero-pill">⚙️ Rubix (x86-64 Language)</span>
+              <span className="hero-pill">💻 Low-Level &amp; Systems</span>
+            </div>
+
             <div className="cta">
               <a className="btn" href="#work">
                 Explore Projects

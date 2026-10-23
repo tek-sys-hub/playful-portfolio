@@ -11,7 +11,7 @@ export const Header: React.FC<HeaderProps> = ({ theme, onToggleTheme }) => {
     <header>
       <div className="wrap">
         <a className="logo" href="#top" title="Cherry (Tek Raj Awasthi)">
-          <i />cherry
+          <img src="/cherry-logo.svg" alt="Cherry" className="logo-img" />cherry
         </a>
         <div className="head-actions">
           <button
