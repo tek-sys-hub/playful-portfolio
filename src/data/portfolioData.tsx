@@ -65,6 +65,19 @@ export const PROJECTS: Project[] = [
     repoUrl: 'https://github.com/tek-sys-hub/Rubix-lang',
   },
   {
+    id: 'playful-portfolio',
+    title: 'playful-portfolio',
+    tag: 'Creative UI · React',
+    category: 'Creative Code',
+    year: '2026',
+    color: 'var(--coral)',
+    coverKey: 'playful',
+    description:
+      'A tactile, neo-brutalist interactive portfolio built with React, TypeScript, physics-driven canvas simulations, cartoon sound effects, and playful mascots.',
+    repoUrl: 'https://github.com/tek-sys-hub/playful-portfolio',
+    liveUrl: 'https://www.tekawasthi.dev/',
+  },
+  {
     id: 'botanical-pixels',
     title: 'botanical-pixels',
     tag: 'Creative Coding · Art',
@@ -244,6 +257,27 @@ export const BLOOP_MOODS = ['#FF6B4A', '#8EA2FF', '#3DDBA6', '#FF8AD1', '#FFC933
 // Custom SVG Cover Artwork for All Repositories
 export const CoverArt: React.FC<{ name: string }> = ({ name }) => {
   switch (name) {
+    case 'playful':
+      return (
+        <svg viewBox="0 0 200 120" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <rect x="25" y="16" width="150" height="88" rx="8" style={{ fill: 'var(--card)', stroke: 'var(--ink)' }} />
+          {/* Twin cherries */}
+          <path d="M78 52 C88 32, 98 28, 106 32 C114 36, 122 46, 126 56" style={{ stroke: '#2E7D32', strokeWidth: 3 }} />
+          <path d="M106 32 C104 22, 114 18, 120 22 C118 28, 110 32, 106 32 Z" style={{ fill: '#4CAF50', stroke: '#2E7D32', strokeWidth: 1.5 }} />
+          <circle cx="82" cy="68" r="16" style={{ fill: '#FF2A4D', stroke: 'var(--navy)', strokeWidth: 2.5 }} />
+          <circle cx="122" cy="70" r="16" style={{ fill: '#E6002A', stroke: 'var(--navy)', strokeWidth: 2.5 }} />
+          <ellipse cx="76" cy="62" rx="4" ry="2.5" transform="rotate(-30 76 62)" style={{ fill: '#fff', opacity: 0.8 }} />
+          <ellipse cx="116" cy="64" rx="4" ry="2.5" transform="rotate(-30 116 64)" style={{ fill: '#fff', opacity: 0.8 }} />
+          {/* cute sparkle stars */}
+          <path d="M48 38 L50 44 L56 46 L50 48 L48 54 L46 48 L40 46 L46 44 Z" style={{ fill: 'var(--sunny)', stroke: 'var(--navy)', strokeWidth: 1.5 }} />
+          <path d="M152 40 L154 45 L159 46.5 L154 48 L152 53 L150 48 L145 46.5 L150 45 Z" style={{ fill: 'var(--mint)', stroke: 'var(--navy)', strokeWidth: 1.5 }} />
+          {/* Tag badge */}
+          <rect x="68" y="92" width="64" height="12" rx="6" style={{ fill: 'var(--sunny)', stroke: 'var(--ink)', strokeWidth: 1.5 }} />
+          <text x="100" y="100.5" textAnchor="middle" style={{ fontFamily: 'var(--mono)', fontSize: '8px', fill: 'var(--ink)', fontWeight: 800 }}>
+            PORTFOLIO
+          </text>
+        </svg>
+      );
     case 'rubix':
       return (
         <svg viewBox="0 0 200 120" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
