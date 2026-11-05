@@ -49,6 +49,7 @@ export const SkillsSection: React.FC = () => {
             padding: '24px 18px',
             boxShadow: '5px 5px 0 var(--ink)',
             textAlign: 'center',
+            minHeight: '140px',
           }}
         >
           <p className="mono" style={{ marginBottom: '14px' }}>
@@ -56,8 +57,20 @@ export const SkillsSection: React.FC = () => {
           </p>
           <img
             src="https://skillicons.dev/icons?i=linux,git,github,c,cpp,java,dart,flutter,html,css,js&theme=dark&perline=11"
-            alt="Technology stack"
-            style={{ maxWidth: '100%', height: 'auto' }}
+            alt="Technologies and programming languages icon strip"
+            width="600"
+            height="48"
+            loading="lazy"
+            decoding="async"
+            style={{
+              width: 600,
+              height: 48,
+              maxWidth: '100%',
+              aspectRatio: '600 / 48',
+              objectFit: 'contain',
+              display: 'block',
+              margin: '0 auto',
+            }}
           />
         </div>
       </div>

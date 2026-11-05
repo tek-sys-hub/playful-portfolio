@@ -10,8 +10,8 @@ export const Footer: React.FC<FooterProps> = ({ pokes }) => {
     <footer>
       <div className="wrap foot">
         <div className="foot-brand">
-          <a className="logo" href="#top">
-            <img src="/cherry-logo.svg" alt="Cherry" className="logo-img" />cherry
+          <a className="logo" href="#top" aria-label="Cherry homepage - back to top">
+            <img src="/cherry-logo.svg" alt="" aria-hidden="true" className="logo-img" width="28" height="28" />cherry
           </a>
           <p>
             Tek Raj Awasthi (Cherry) · Independent Developer · Systems · Creative Code. Building things from the ground up.

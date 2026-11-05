@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
             <h1 id="headline">
               Hi, I'm{' '}
               <span className="title-cherry-wrap">
-                <img src="/cherry-logo.svg" alt="Cherry" className="title-cherry-img" />
+                <img src="/cherry-logo.svg" alt="" aria-hidden="true" className="title-cherry-img" />
                 Cherry
               </span>
               . I build <em className="hl">from the ground up</em>.

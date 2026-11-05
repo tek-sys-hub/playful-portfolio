@@ -2,6 +2,7 @@
 header {
   position: relative;
   z-index: 10;
+  min-height: 80px;
 }
 
 header .wrap {
@@ -34,6 +35,7 @@ header .wrap {
 .logo-img {
   width: 28px;
   height: 28px;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
   vertical-align: middle;
   display: block;
@@ -67,13 +69,14 @@ header .wrap {
   position: relative;
   padding-block: 28px 64px;
   overflow: clip;
+  contain: layout;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   gap: 40px;
-  align-items: center;
+  align-items: start;
   position: relative;
 }
 
@@ -99,20 +102,35 @@ header .wrap {
   height: 10px;
   border-radius: 50%;
   background: var(--mint);
-  box-shadow: 0 0 0 0 var(--mint);
-  animation: ping 2s infinite;
+  position: relative;
+  display: inline-block;
+}
+
+.status b::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  background: var(--mint);
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  pointer-events: none;
 }
 
 @keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
   70%, 100% {
-    box-shadow: 0 0 0 10px transparent;
+    transform: scale(2.4);
+    opacity: 0;
   }
 }
 
 h1 {
   font-size: clamp(2.7rem, 8.2vw, 6.1rem);
   font-weight: 800;
-  line-height: 0.95;
+  line-height: 1;
 }
 
 h1 .hl {
@@ -136,6 +154,7 @@ h1 .hl {
 .title-cherry-img {
   width: 0.88em;
   height: 0.88em;
+  aspect-ratio: 1 / 1;
   display: inline-block;
   vertical-align: -0.06em;
   animation: floatCherry 3.6s ease-in-out infinite;
@@ -304,6 +323,7 @@ h1 .hl {
   padding-block: 14px;
   overflow: hidden;
   border-block: 3px solid var(--ink);
+  min-height: 58px;
 }
 
 .band-clip {
@@ -433,7 +453,8 @@ h2 {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  opacity: 0.7;
+  opacity: 0.88;
+  font-weight: 600;
 }
 
 .card h3 {
@@ -800,7 +821,7 @@ h2 {
 
 .link small {
   font: 500 0.8rem var(--mono);
-  opacity: 0.75;
+  opacity: 0.88;
   overflow-wrap: anywhere;
 }
 
@@ -825,7 +846,8 @@ footer {
 
 .foot p.mono {
   margin-bottom: 14px;
-  opacity: 0.7;
+  opacity: 0.88;
+  font-weight: 600;
 }
 
 .foot-brand p:not(.mono) {
@@ -914,6 +936,8 @@ footer {
   max-width: 440px;
   margin-inline: auto;
   width: 100%;
+  min-height: 520px;
+  contain: layout;
 }
 
 .funny-card:hover {
@@ -957,7 +981,7 @@ footer {
   padding: 12px 16px;
   box-shadow: 4px 4px 0 var(--ink);
   text-align: center;
-  min-height: 58px;
+  min-height: 74px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -990,6 +1014,7 @@ footer {
 .funny-svg {
   width: 100%;
   height: auto;
+  aspect-ratio: 340 / 320;
   display: block;
   overflow: visible;
 }
@@ -1061,8 +1086,9 @@ footer {
   gap: 8px;
 }
 .control-label {
-  font-size: 0.72rem;
-  opacity: 0.75;
+  font-size: 0.75rem;
+  opacity: 0.9;
+  font-weight: 600;
   text-align: center;
 }
 .mood-btn-group {
@@ -1116,7 +1142,7 @@ footer {
   border: 2.5px solid var(--ink);
   border-radius: 999px;
   background: #FF453A;
-  color: #FFFFFF;
+  color: #14163A;
   cursor: pointer;
   box-shadow: 3px 3px 0 var(--ink);
   transition: transform 0.1s, box-shadow 0.1s, background-color 0.15s;
@@ -1125,6 +1151,7 @@ footer {
   transform: translate(-2px, -2px);
   box-shadow: 5px 5px 0 var(--ink);
   background: #FF2D55;
+  color: #FFFFFF;
 }
 .danger-btn:active {
   transform: translate(2px, 2px);

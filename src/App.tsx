@@ -58,8 +58,8 @@ export const App: React.FC = () => {
   return (
     <>
       <FloatingBackground />
-      <Bloop pokes={pokes} onPoke={handlePoke} />
       <ConfettiCanvas />
+      <Bloop pokes={pokes} onPoke={handlePoke} />
 
       <Header theme={theme} onToggleTheme={handleToggleTheme} />
 

@@ -1,0 +1,13 @@
+# Cherry
+
+Independent Developer · Systems · Creative Code. Building things from the ground up.
+
+## Links
+
+- [Home](https://www.tekawasthi.dev/)
+- [Projects](/#work)
+- [Skills](/#skills)
+- [About](/#about)
+- [Contact](/#hi)
+- [GitHub](https://github.com/tek-sys-hub)
+- [LinkedIn](https://www.linkedin.com/in/tek-raj-awasthi-1a9768412)

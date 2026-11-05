@@ -27,14 +27,18 @@ export const FloatingBackground: React.FC = () => {
     const PAL = ['#FF6B4A', '#FFC933', '#3DDBA6', '#8EA2FF', '#FF8AD1', '#C9A7FF'];
     const KINDS: ('circle' | 'ring' | 'star' | 'plus' | 'squig')[] = ['circle', 'ring', 'star', 'plus'];
     let shapes: Shape[] = [];
-    let inkColor = '#14163A';
-    let frame = 0;
+    let inkColor = document.documentElement.getAttribute('data-theme') === 'dark' ? '#F1F0FF' : '#14163A';
     let animId = 0;
     const mouse = { x: -999, y: -999 };
 
-    const readInk = () => {
-      inkColor = getComputedStyle(document.documentElement).getPropertyValue('--ink').trim() || inkColor;
+    const updateInk = () => {
+      inkColor = document.documentElement.getAttribute('data-theme') === 'dark' ? '#F1F0FF' : '#14163A';
     };
+
+    const observer = new MutationObserver(() => {
+      updateInk();
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
     const makeShapes = () => {
       const n = Math.round(Math.max(6, Math.min(12, (window.innerWidth * window.innerHeight) / 110000)));
@@ -133,8 +137,10 @@ export const FloatingBackground: React.FC = () => {
     };
 
     const stepBg = () => {
-      frame++;
-      if (frame % 60 === 0) readInk();
+      if (document.hidden) {
+        animId = requestAnimationFrame(stepBg);
+        return;
+      }
       const W = window.innerWidth;
       const H = window.innerHeight;
 
@@ -173,7 +179,7 @@ export const FloatingBackground: React.FC = () => {
       mouse.y = -999;
     };
 
-    readInk();
+    updateInk();
     sizeCanvas();
     window.addEventListener('resize', sizeCanvas);
     window.addEventListener('pointermove', onPointerMove, { passive: true });
@@ -184,6 +190,7 @@ export const FloatingBackground: React.FC = () => {
     }
 
     return () => {
+      observer.disconnect();
       window.removeEventListener('resize', sizeCanvas);
       window.removeEventListener('pointermove', onPointerMove);
       document.removeEventListener('pointerleave', onPointerLeave);

@@ -69,6 +69,7 @@ export const ProjectsSection: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn small"
+                        aria-label={`Live Demo ↗ for ${p.title}`}
                       >
                         Live Demo ↗
                       </a>
@@ -78,6 +79,7 @@ export const ProjectsSection: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`btn small ${p.liveUrl ? 'ghost' : ''}`}
+                      aria-label={p.liveUrl ? `GitHub ↗ for ${p.title}` : `View on GitHub → for ${p.title}`}
                     >
                       {p.liveUrl ? 'GitHub ↗' : 'View on GitHub →'}
                     </a>

@@ -1,0 +1,22 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Cherry (Tek Raj Awasthi)"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:tekawasthi.dev:portfolio:overview",
+      "displayName": "Cherry — Tek Raj Awasthi Portfolio",
+      "description": "Independent Developer · Systems · Creative Code. Building things from the ground up.",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://www.tekawasthi.dev/llms.txt",
+      "representativeQueries": [
+        "Tek Raj Awasthi",
+        "Cherry portfolio",
+        "Rubix language",
+        "systems programming",
+        "creative coding"
+      ]
+    }
+  ]
+}
